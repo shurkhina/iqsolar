@@ -1,12 +1,12 @@
-// scroll up 
+// scroll header
 window.addEventListener('scroll', function(){
     var headerBlock = document.querySelector('header'),
-    scrollUp = window.pageYOffset || document.documentElement.scrollTop;
+    headerUp = window.pageYOffset || document.documentElement.scrollTop;
 
-    if(scrollUp >= 10){
-        headerBlock.style.background = 'white';
-    } else if(scrollUp < 10){
-        headerBlock.style.background = '';
+    if(headerUp >= 10){
+        headerBlock.classList.add('header_scroll');
+    } else if(headerUp < 10){
+        headerBlock.classList.remove('header_scroll');
     }
 
 });
